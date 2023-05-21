@@ -35,13 +35,13 @@
 <br>
 
 ### Redis 적용 전
-=> 5760ms
+=> 4571ms<br>
 ![Redis_No](https://github.com/acrnm148/hexagonal-architecture-with-spring-boot-practice/assets/67724306/47d8b98f-7847-4817-aa81-53a1b6704cb0)
 
 <br>
 
 ### Redis 적용 후
-=> 1ms
+=> 1ms<br>
 ![Redis_Yes](https://github.com/acrnm148/hexagonal-architecture-with-spring-boot-practice/assets/67724306/b19d4c53-73ea-487b-aece-e83f6fd81d9f)
 
 <br>
