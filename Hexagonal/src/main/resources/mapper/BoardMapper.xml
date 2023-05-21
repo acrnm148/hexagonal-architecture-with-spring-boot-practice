@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mycom.myboard.adapter.out.persistence.BoardMapper">
+
+	<select id="selectBoardList" parameterType="com.mycom.myboard.adapter.out.persistence.entity.BoardSearchEntity" resultType="com.mycom.myboard.adapter.out.persistence.entity.BoardEntity">
+		SELECT *
+		  FROM public.board
+		<if test= "(searchWord != null) and (searchWord != '')" >
+			where title like concat('%', #{searchWord}, '%')
+			or contents like concat('%', #{searchWord}, '%')
+		</if>
+		ORDER BY board_id DESC
+		LIMIT #{limit} OFFSET #{offset}
+	</select>
+
+	<select id="selectBoardListCnt" resultType="int">
+		SELECT COUNT(*) FROM public.board
+	</select>
+
+	<insert id="insertBoard" parameterType="com.mycom.myboard.adapter.out.persistence.entity.BoardEntity" useGeneratedKeys="true" keyProperty="boardId">
+		INSERT INTO public.board ( TITLE, CONTENTS, REG_DTTM, AUTHOR )
+		            VALUES ( #{title}, #{contents}, now(), #{author} )
+	</insert>
+
+	<update id="updateBoard" parameterType="com.mycom.myboard.adapter.out.persistence.entity.BoardEntity">
+		UPDATE public.board
+		   SET TITLE = #{title},
+		   CONTENTS   = #{contents}
+		 WHERE BOARD_ID = #{boardId}
+	</update>
+
+	<delete id="deleteBoard" parameterType="com.mycom.myboard.adapter.out.persistence.entity.BoardSearchEntity">
+		DELETE FROM public.board WHERE BOARD_ID = #{boardId}
+	</delete>
+
+	<select id="selectBoardDetail" parameterType="com.mycom.myboard.adapter.out.persistence.entity.BoardSearchEntity" resultType="com.mycom.myboard.adapter.out.persistence.entity.BoardEntity">
+		SELECT *
+		  FROM public.board
+		 WHERE BOARD_ID = #{boardId}
+	</select>
+</mapper>
