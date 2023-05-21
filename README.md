@@ -28,7 +28,7 @@
 ![1_Login](https://github.com/acrnm148/hexagonal-architecture-with-spring-boot-practice/assets/67724306/cb71c528-0327-40cf-b11f-bd502809cff2)
 <br><br><br>
 
-### 2. Redis 적용 전 => 4571ms
+### 2. Redis 적용 전(캐시미스) => 4571ms
 
 ![Redis_No](https://github.com/acrnm148/hexagonal-architecture-with-spring-boot-practice/assets/67724306/47d8b98f-7847-4817-aa81-53a1b6704cb0)
 ![image](https://github.com/acrnm148/hexagonal-architecture-with-spring-boot-practice/assets/67724306/c9198f43-0a8a-4c62-b76a-f770f4cdebdb)
