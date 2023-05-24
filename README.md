@@ -43,12 +43,15 @@
 
 <strong>▶Redis 적용 전 => 4571ms</strong>
 
+![image](https://github.com/acrnm148/hexagonal-architecture-with-spring-boot-practice/assets/67724306/909d7882-1f70-4fde-9ea1-e91e04750fd0)
 ![Redis_No](https://github.com/acrnm148/hexagonal-architecture-with-spring-boot-practice/assets/67724306/47d8b98f-7847-4817-aa81-53a1b6704cb0)
 ![image](https://github.com/acrnm148/hexagonal-architecture-with-spring-boot-practice/assets/67724306/c9198f43-0a8a-4c62-b76a-f770f4cdebdb)
 
 <br>
 
 <strong>▶Redis 적용 후 => 1ms</strong>
+
+![image](https://github.com/acrnm148/hexagonal-architecture-with-spring-boot-practice/assets/67724306/b2ca818a-b0b6-4ba8-940a-1fcfe4081ffd)
 
 ![Redis_Yes](https://github.com/acrnm148/hexagonal-architecture-with-spring-boot-practice/assets/67724306/b19d4c53-73ea-487b-aece-e83f6fd81d9f)
 ![image](https://github.com/acrnm148/hexagonal-architecture-with-spring-boot-practice/assets/67724306/4ba55748-41cc-4443-a404-ece69415b214)
